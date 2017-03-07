@@ -16,21 +16,19 @@ public class MainClass {
 
         List<Pair> pairList = new ArrayList<>();
 
-        int length = 5;
+        System.out.println("Enter number total number of people to group");
+
+        int length = lop.nextInt();
+        lop.nextLine();
         List<String> names = new ArrayList<>();
         String s = "Please enter " + length + " names.";
         System.out.println(s);
 
         names = getNames(lop, names, 0, length);
 
-        for (int i = 0; i < length; i++) {
-            System.out.println(names.get(i));
-        }
 
         Collections.shuffle(names);
 
-
-        System.out.println(names.size());
 
         int counter = 0;
         for (int i =0; i< names.size(); i+=2){
@@ -41,10 +39,8 @@ public class MainClass {
 
         names.clear();
 
-        System.out.println(pairList.size());
-
         for (Pair par : pairList) {
-            System.out.println(par.getKey() + "and" + par.getValue());
+            System.out.println(par.getKey() + " and " + par.getValue());
         }
 
 
